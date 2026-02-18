@@ -3,11 +3,11 @@
   (import (chezscheme))
 
   (define (assert-equal a b msg)
-    (unless (equal? a b)
-      (error msg a b)))
+    (cond ((equal? a b) (display "🐢 PASS\n"))
+          (else (error (string-append "🐢 " msg) a b))))
 
   (define (ok)
-    (display "OK!\n"))
+    (display "🐢 OK!\n"))
 
   )
 
