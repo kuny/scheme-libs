@@ -8,6 +8,7 @@ mkdir -p "$NAME/test"
 cp "$SCHEMETEMPLATES/main.ss" "$NAME/src/main.ss"
 cp "$SCHEMETEMPLATES/test.ss" "$NAME/test/test.ss"
 cp "$SCHEMETEMPLATES/Makefile" "$NAME/Makefile"
+cp "$SCHEMETEMPLATES/gitignore.gitignore" "$NAME/.gitignore"
 
 cd "$NAME"
 git init
