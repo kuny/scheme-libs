@@ -7,7 +7,7 @@
       (error msg a b)))
 
   (define (ok)
-    (display "OK!"))
+    (display "OK!\n"))
 
   )
 
