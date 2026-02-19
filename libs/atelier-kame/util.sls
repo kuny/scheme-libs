@@ -1,11 +1,19 @@
 (library (atelier-kame util)
-  (export 
+  (export
+    to-string
+    to-number
     first 
     second 
     concat 
     flatten
     pow)
   (import (chezscheme))
+
+  (define (to-string n)
+    (number->string n))
+
+  (define (to-number s)
+    (string->number s))
 
   (define (first lst)
     (car lst))
