@@ -5,10 +5,12 @@ NAME=$1
 mkdir -p "$NAME/src/$NAME"
 mkdir -p "$NAME/test"
 
-cp "$SCHEMETEMPLATES/main.ss" "$NAME/src/main.ss"
-cp "$SCHEMETEMPLATES/test.ss" "$NAME/test/test.ss"
-cp "$SCHEMETEMPLATES/Makefile" "$NAME/Makefile"
-cp "$SCHEMETEMPLATES/gitignore.gitignore" "$NAME/.gitignore"
+cp "$SCHEMELIBDIR/templates/main.ss" "$NAME/src/main.ss"
+cp "$SCHEMELIBDIR/templates/test.ss" "$NAME/test/test.ss"
+cp "$SCHEMELIBDIR/templates/Makefile" "$NAME/Makefile"
+cp "$SCHEMELIBDIR/templates/gitignore.gitignore" "$NAME/.gitignore"
+
+cp -r "$SCHEMELIBDIR/libs/atelier-kame" "$NAME/src/atelier-kame"
 
 cd "$NAME"
 git init
